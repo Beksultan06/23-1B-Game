@@ -1,0 +1,184 @@
+{% extends 'include/homapage.html' %}
+{% load static %}
+{% block content %}
+
+       
+       
+      <!-- Custom Cursor Start -->
+      <div id="cursor-large"></div>
+      <div id="cursor-small"></div>
+      <!-- Custom Cursor End -->
+       
+       
+      <!-- Header Area Start -->
+         {% include 'include/header.html' %}
+
+      <!-- Header Area End -->
+       
+       
+      <!-- Breadcrumb Area Start -->
+      <section class="fag-breadcrumb-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="breadcromb-box">
+                     <h3>All News</h3>
+                     <ul>
+                        <li><i class="fa fa-home"></i></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li>All News</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcrumb Area End -->
+       
+       
+      <!-- News Area Start -->
+      <section class="fag-news-page-area section_100">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="post-large">
+                     {% for form in form %}
+                     <div class="blog-item">
+                        <div class="blog-image">
+                           <a href="#">
+                           <img src="{% static 'assets/img/blog-1.jpg' %}" alt="blog" />
+                           </a>
+                        </div>
+                        <div class="blog-text">
+                           <p class="blog-cat"><a href="#">Action</a></p>
+                           <h3><a href="#">{{ form.name }}</a></h3>
+                           <p>{{ form.comment }}.</p>
+                           <ul class="post-info">
+                              <li class="post-date">
+                                 <a href="#"><span class="fa fa-calendar"></span> {{ form.created_at }}
+                                 </a>
+                              </li>
+                              <li class="post-comments">
+                                 <a href="#"><span class="fa fa-comments"></span> 32
+                                 </a>
+                              </li>
+                              <li class="post-fav">
+                                 <a href="#">
+                                 <span class="fa fa-eye"></span>56
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     {% endfor %}
+                     <!--/.end blog item-->
+                     <!--/.end blog item-->
+                  </div>
+                  <div class="pagination-box-row">
+                     <p>Page 1 of 6</p>
+                     <ul class="pagination">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>...</li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="sidebar-widget">
+                     <div class="news-sidebar-item">
+                        <form>
+                           <input type="search" placeholder="Search..." />
+                           <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Categories</h3>
+                        <ul class="categories">
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Action</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Adventure</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Sports</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Racing</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Fighting</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Strategy</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Survival</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Horror</a></li>
+                        </ul>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Recent Post</h3>
+                        <ul class="recent-blog">
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-1.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hot Marketing Trends You Need to Implement</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-2.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Tips To Reduce Your Travel Costs</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-3.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hashtag Effectively In Social Media</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-2.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hot Marketing Trends You Need to Implement</a>
+                                 </h4>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Archive</h3>
+                        <ul class="categories">
+                           <li><a href="#"><i class="fa fa-angle-right"></i>August 2019 <span>(29)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>July 2019 <span>(12)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>June 2019 <span>(22)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>May 2019 <span>(11)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>April 2019 <span>(12)</span></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- News Area End -->
+      <!-- Footer Area Start -->
+      {% include 'include/footer.html' %}
+    <!-- Footer Area End -->
+
+{% endblock %}
