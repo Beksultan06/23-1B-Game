@@ -1,0 +1,294 @@
+{% extends 'include/homapage.html' %}
+{% load static %}
+{% block content %}
+       
+       
+      <!-- Custom Cursor Start -->
+      <div id="cursor-large"></div>
+      <div id="cursor-small"></div>
+      <!-- Custom Cursor End -->
+       
+       
+      <!-- Header Area Start -->
+               {% include 'include/header.html' %}
+
+      <!-- Header Area End -->
+       
+       
+      <!-- Breadcrumb Area Start -->
+      <section class="fag-breadcrumb-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="breadcromb-box">
+                     <h3>Детали Новости</h3>
+                     <ul>
+                        <li><i class="fa fa-home"></i></li>
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li>Детали Новости</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcrumb Area End -->
+       
+       
+      <!-- News Area Start -->
+      <section class="fag-news-page-area section_100">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="post-large blog-details">
+                     <div class="blog-item">
+                        <div class="blog-image">
+                           <img src="{% static 'assets/img/blog-1.jpg' %}" alt="blog" />
+                        </div>
+                        <div class="blog-text">
+                           <ul class="post-info">
+                              <li class="post-date">
+                                 <a href="#"><span class="fa fa-calendar"></span> December 9, 2019
+                                 </a>
+                              </li>
+                              <li class="post-comments">
+                                 <a href="#"><span class="fa fa-comments"></span> 32
+                                 </a>
+                              </li>
+                              <li class="post-fav">
+                                 <a href="#">
+                                 <span class="fa fa-eye"></span>56
+                                 </a>
+                              </li>
+                           </ul>
+                           <h3>{{ news_detail.name }} </h3>
+                           <p>{{ news_detail.comment }}</p>
+                           <div class="blog-inner-image">
+                              <div class="row">
+                                 <div class="col-lg-6 col-sm-6">
+                                    <div class="destination-desc-img">
+                                       <img src="{{ news_detail.image1.url }}" alt="gallery 1">
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-6 col-sm-6">
+                                    <div class="destination-desc-img">
+                                       <img src="{{ news_detail.image2.url }}" alt="gallery 1">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <p>{{ news_detail.text|safe }}.</p>
+
+                        </div>
+                     </div>
+                     <!--/.end blog item-->
+                     <div class="fag-comment-list">
+                        <div class="comment-group-title">
+                           <h3>Comments (03)</h3>
+                        </div>
+                        <div class="single-comment-item">
+                           <div class="single-comment-box">
+                              <div class="main-comment">
+                                 <div class="author-image">
+                                    <img src="{% static 'assets/img/4.jpg' %}" alt="author">
+                                 </div>
+                                 <div class="comment-text">
+                                    <div class="comment-info">
+                                       <h4>david kamal</h4>
+                                       <ul>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                       </ul>
+                                       <p>4 minitues ago</p>
+                                    </div>
+                                    <div class="comment-text-inner">
+                                       <p>Ne erat velit invidunt his. Eum in dicta veniam interesset, harum lupta definitionem. Vocibus suscipit prodesset vim ei, equidem perpetua eu per.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="single-comment-box comment_reply">
+                              <div class="main-comment">
+                                 <div class="author-image">
+                                    <img src="{% static 'assets/img/5.jpg' %}" alt="author">
+                                 </div>
+                                 <div class="comment-text">
+                                    <div class="comment-info">
+                                       <h4>Jerix Ablin</h4>
+                                       <ul>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star-o"></i></li>
+                                       </ul>
+                                       <p>12 minitues ago</p>
+                                    </div>
+                                    <div class="comment-text-inner">
+                                       <p>orem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo? </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="single-comment-box">
+                              <div class="main-comment">
+                                 <div class="author-image">
+                                    <img src="{% static 'assets/img/4.jpg' %}" alt="author">
+                                 </div>
+                                 <div class="comment-text">
+                                    <div class="comment-info">
+                                       <h4>david kamal</h4>
+                                       <ul>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                          <li><i class="fa fa-star"></i></li>
+                                       </ul>
+                                       <p>4 minitues ago</p>
+                                    </div>
+                                    <div class="comment-text-inner">
+                                       <p>Ne erat velit invidunt his. Eum in dicta veniam interesset, harum lupta definitionem. Vocibus suscipit prodesset vim ei, equidem perpetua eu per.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- /end comment list -->
+                     <div class="fag-leave-comment">
+                        <h3>Leave a Comment</h3>
+                        <form method="post">
+                           {% csrf_token %}
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <div class="comment-field">
+                                    <input class="ns-com-name" name="name" placeholder="Name" type="text">
+                                 </div>
+                              </div>
+                              <div class="col-lg-6">
+                                 <div class="comment-field">
+                                    <input class="ns-com-name" name="email" placeholder="Email" type="email">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="comment-field">
+                                    <textarea class="comment" placeholder="Comment..." name="comment"></textarea>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="comment-field">
+                                    <button type="submit" class="fag-btn">post comment <span></span></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                     <!-- /end comment form -->
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="sidebar-widget">
+                     <div class="news-sidebar-item">
+                        <form>
+                           <input type="search" placeholder="Search..." />
+                           <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Categories</h3>
+                        <ul class="categories">
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Action</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Adventure</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Sports</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Racing</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Fighting</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Strategy</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Survival</a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>Horror</a></li>
+                        </ul>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Recent Post</h3>
+                        <ul class="recent-blog">
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-1.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hot Marketing Trends You Need to Implement</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-2.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Tips To Reduce Your Travel Costs</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-3.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hashtag Effectively In Social Media</a>
+                                 </h4>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="recent-img">
+                                 <a href="#">
+                                 <img src="assets/img/blog-small-2.jpg" alt="recent image">
+                                 </a>
+                              </div>
+                              <div class="recent-text">
+                                 <h4>
+                                    <a href="#">Hot Marketing Trends You Need to Implement</a>
+                                 </h4>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="news-sidebar-item">
+                        <h3>Archive</h3>
+                        <ul class="categories">
+                           <li><a href="#"><i class="fa fa-angle-right"></i>August 2019 <span>(29)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>July 2019 <span>(12)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>June 2019 <span>(22)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>May 2019 <span>(11)</span></a></li>
+                           <li><a href="#"><i class="fa fa-angle-right"></i>April 2019 <span>(12)</span></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- News Area End -->
+       
+       
+      <!-- Footer Area Start -->
+         {% include 'include/footer.html' %}
+
+    <!-- Footer Area End -->
+{% endblock %}

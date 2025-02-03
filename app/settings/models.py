@@ -88,6 +88,12 @@ class ContactFrom(models.Model):
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=False)
+    image1 = models.ImageField(upload_to='news', blank=True, null=True, verbose_name='Фото')
+    image2 = models.ImageField(upload_to='news', blank=True, null=True, verbose_name='Фото 2')
+    text = RichTextField(
+        verbose_name="Текст",
+        blank=True, null=True
+    )
 
     def __str__(self):
         return self.name

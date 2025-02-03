@@ -46,25 +46,25 @@
                      {% for form in form %}
                      <div class="blog-item">
                         <div class="blog-image">
-                           <a href="#">
+                           <a href="{% url 'news_detail' form.pk %}">
                            <img src="{% static 'assets/img/blog-1.jpg' %}" alt="blog" />
                            </a>
                         </div>
                         <div class="blog-text">
-                           <p class="blog-cat"><a href="#">Action</a></p>
-                           <h3><a href="#">{{ form.name }}</a></h3>
+                           <p class="blog-cat"><a href="{% url 'news_detail' form.pk %}">Action</a></p>
+                           <h3><a href="{% url 'news_detail' form.pk %}">{{ form.name }}</a></h3>
                            <p>{{ form.comment }}.</p>
                            <ul class="post-info">
                               <li class="post-date">
-                                 <a href="#"><span class="fa fa-calendar"></span> {{ form.created_at }}
+                                 <a href="{% url 'news_detail' form.pk %}"><span class="fa fa-calendar"></span> {{ form.created_at }}
                                  </a>
                               </li>
                               <li class="post-comments">
-                                 <a href="#"><span class="fa fa-comments"></span> 32
+                                 <a href="{% url 'news_detail' form.pk %}"><span class="fa fa-comments"></span> 32
                                  </a>
                               </li>
                               <li class="post-fav">
-                                 <a href="#">
+                                 <a href="{% url 'news_detail' form.pk %}">
                                  <span class="fa fa-eye"></span>56
                                  </a>
                               </li>
